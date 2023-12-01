@@ -23,6 +23,9 @@ from alien import Alien
 import pygame
 
 
+
+
+
 class AlienInvasion:
     """Overall class to manage game assets and behavior."""
 
@@ -34,7 +37,7 @@ class AlienInvasion:
         self.screen = pygame.display.set_mode((0, 0), pygame.FULLSCREEN)
         self.settings.screen_width = self.screen.get_rect().width
         self.settings.screen_height = self.screen.get_rect().height
-        pygame.display.set_caption("Alien Invasion")
+        self.clock = pygame.time.Clock()
 
         # Create an instance to store game statistics.
         #   and create a scoreboard.
@@ -60,6 +63,7 @@ class AlienInvasion:
                 self._update_bullets()
                 self._update_aliens()
 
+            self.clock.tick(60)
             self._update_screen()
 
     def _check_events(self):
@@ -190,7 +194,7 @@ class AlienInvasion:
         """Drop the entire fleet and change the fleet's direction."""
         for alien in self.aliens.sprites():
             alien.rect.y += self.settings.fleet_drop_speed
-        self.settings.fleet_direction *= -1
+            alien.fleet_direction *= -1
 
     def _update_aliens(self):
         """
