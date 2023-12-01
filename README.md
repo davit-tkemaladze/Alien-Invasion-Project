@@ -1,5 +1,4 @@
-# Alien-Invasion-Project, is a 2d game, where you have battleship and aliens are invading it. You have to shoot down all the aliens before they reach or pass your ship(You have 3 ships in reserve).
-# When you shoot down all of the aliens difficulty of the game increases(The game has 3 stages).
+# Alien-Invasion-Project, is a 2d game, where you have battleship and aliens are invading it. You have to shoot down all the aliens before they reach or pass your ship(You have 3 ships in reserve). When you shoot down all of the aliens difficulty of the game increases(The game has 3 stages).
 
 # My application uses pygame library to create 2d battleship, which can shoot bullets. And aliens (the amount that can fit through some part of the screen), that come down on the screen while changing directions on the edges. 
 # Managing aliens/battleships speed was very challenging and im hoping to modify the game so everyone can play the game on the same(at least relatable) speed.
